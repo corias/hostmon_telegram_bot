@@ -9,6 +9,9 @@ import requests
 ## TELEGRAM SETTINGS HERE, EDIT FILE TO USE
 #######################################
 import tg_bot_settings as settings
+if (settings.validate() == False):
+    print("Invalid settings, check tg_token and tg_chatid in tg_bot_settings.py")
+    sys.exit(3)
 
 
 ## MAIN CLASS THAT WILL DO ALl DIRTY WORK

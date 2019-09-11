@@ -8,3 +8,13 @@ tg_token = ''
 tg_chatid = ''
 ## VERBOSITY
 verbosity = True
+
+
+##Validate settings
+def validate():
+	valid = True
+	if tg_token == '':
+		valid = False
+	if tg_chatid == '':
+		valid = False
+	return valid
