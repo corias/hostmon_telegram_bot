@@ -2,20 +2,6 @@
 ## BY KIRILL NIKITIN TGID @CORIAS
 ## FOR THOSE WHO DO NOT WANT TO BUY 11.99
 #######################################
-## HOW TO USE IT:
-## 1. REGISTER YOUR BOT WITH BOTFATHER
-## 2. ADD IT TO THE DESIRED GROUP OR CHANNEL
-## 3. INSTALL PYTHON, PYTHON-PIP AND REQUESTS
-## 4. ADD PYTHON FOLDER TO PATH
-## 5. UNZIP THIS FILE AND tg_bot_settings.py TO FOLDER ON YOUR HOSTMONITOR MACHINE
-##    HOSMONITOR USER SHOULD HAVE READ ACCESS TO IT
-## 6. EDIT tg_bot_settings.py AS DESCRIPTED IN IT
-## 7. ADD ACTION PROFILE TO HOSTMONITOR CONTAINING FOLLOWING:
-##    ACTION TYPE - Run external program
-##    COMMAND LINE - py hostmon_alert_bot.py -n "%TestName%" -s "%Status%" -m "%TestMethod%" -r "%Reply%" -f "%Folder%"
-##    KEYS -m -r -f ARE OPTIONAL
-##    WORKING DIRECTORY - script folder
-##    WINDOW MODE - SW_HIDDEN
 
 import sys, getopt
 import requests
@@ -35,7 +21,7 @@ class HostmonAlert:
         self.method = ''
         self.reply = ''
         
-    #GET COMMAND LINE ARGUMENTS
+    # GET COMMAND LINE ARGUMENTS
     def GetCmdLine(self, argv):
         try:
             opts, args = getopt.getopt(argv,"hn:s:f:m:r:",["name=","status=","folder=","method=","reply="])
@@ -91,7 +77,7 @@ class HostmonAlert:
             emojicode = u'\U0000274C'
         return emojicode
         
-    #SEND MESSAGE
+    # SEND MESSAGE
     def SendMessage (self, token, chat, text):
         message = text
         if (settings.verbosity):
