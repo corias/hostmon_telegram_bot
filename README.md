@@ -21,4 +21,4 @@ HOW TO USE IT:
 
 ALTERNATE USAGE:
 You may use this script with command-line arguments from any other caller, it's just optimized for hostmonitor
-Syntax is: py hostmon_alert_bot.py -n "<TestName>" -s "<Status>" [-m "<Method>" -r "<Reply>" -f "<Folder>"]
+Syntax is: py hostmon_alert_bot.py -n "%TestName%" -s "%Status%" [-m "%TestMethod%" -r "%Reply%" -f "%Folder%]
