@@ -33,9 +33,8 @@ class HostmonAlert:
         self.status = status
         self.folder = ''
         self.method = ''
-        self.reply = 'Y0lln3v3rG=TSu(hR3plY'
-        ## I'VE HAD TO USE SOME WEIRD STRING WHICH HOSTMONITOR WILL NEVER GENERATE TO SHOW BLANK REPLIES
-
+        self.reply = ''
+        
     #GET COMMAND LINE ARGUMENTS
     def GetCmdLine(self, argv):
         try:
@@ -61,11 +60,10 @@ class HostmonAlert:
     # FORMAT TEXT TO MARKDOWN STYLE
     def FormTelegramMessage(self):
             emoji = self.GenerateStatusEmoji()
-            text = '*'
-            text += self.name + ': ' + emoji + ' ' + self.status + '*\n'
+            text = '*' + self.name + ': ' + emoji + ' ' + self.status + '*\n'
             if self.method != '':
                 text += '*Method:* ' + self.method + '\n'
-            if self.reply != "Y0lln3v3rG=TSu(hR3plY":
+            if self.reply != '':
                 text += '*Reply:* ' + self.reply + '\n'
             if self.folder != '':
                 text += '\n'
