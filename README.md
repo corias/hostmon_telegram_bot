@@ -20,6 +20,5 @@ HOW TO USE IT:
 8. If needed, add a 'good' action with same parameters as in step above
 
 ALTERNATE USAGE:
-
 You may use this script with command-line arguments from any other caller, it's just optimized for hostmonitor
 Syntax is: py hostmon_alert_bot.py -n "%TestName%" -s "%Status%" [-m "%TestMethod%" -r "%Reply%" -f "%Folder%]
